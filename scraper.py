@@ -83,10 +83,6 @@ class WebScraper:
     def invoke_bedrock(self, prompt: str) -> str:
         """Invoke Bedrock model with the given prompt."""
 
-        # save promt in txt file
-        with open("prompt.txt", "w") as f:
-            f.write(prompt)
-
         body = json.dumps({
             "prompt": prompt,
             "temperature": 0.2,
